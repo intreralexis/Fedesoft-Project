@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="secondary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Registrarse</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Digita tu nombre</ion-label>
+    <ion-input [(ngModel)]="user.firstname" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digita tu apellido</ion-label>
+    <ion-input [(ngModel)]="user.lastname" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digita tu fecha de nacimiento</ion-label>
+    <ion-input [(ngModel)]="user.birthdate" type="date" margin-top="10px"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Digita tu identificación</ion-label>
+    <ion-input [(ngModel)]="user.identification" type="number"></ion-input>
+  </ion-item>
+  <ion-button  color="primary" (click)="saveUser()" expand="block">Guardar</ion-button>
+</ion-content>

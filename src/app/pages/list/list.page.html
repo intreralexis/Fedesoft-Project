@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar color="medium">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title color="dark">Registrados</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-spinner center name="dots" *ngIf="loading"></ion-spinner>
+  <ion-list *ngIf="!loading">
+    <ion-item *ngFor="let user of users">
+      <ion-label>
+        <h3>Nombre</h3>
+        <p>{{user.firstname}} {{user.lastname}}</p>
+      </ion-label>
+      <ion-label slot="end"  text-right>
+        <p>{{user.identification}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
